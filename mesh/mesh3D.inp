@@ -1,0 +1,16 @@
+CTAB       1 FLUI       2       0       11       0       0 blk-1
+RDEF,1,CYCL
+
+RDEF,2,OUTL
+
+RDEF,3,CYCL
+
+RDEF,4,SYMP
+RDEF,5,WALL
+
+
+RDEF,6,INLE
+
+cread,mesh3D.cel,icvo,,,,coded
+vread,mesh3D.vrt,icvo,,,coded
+bread,mesh3D.bnd,0,all,,add,code,0,0

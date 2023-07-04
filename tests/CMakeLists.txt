@@ -1,0 +1,1 @@
+target_sources(${CMAKE_PROJECT_NAME}Test PRIVATE meshReaderTests.cpp)
