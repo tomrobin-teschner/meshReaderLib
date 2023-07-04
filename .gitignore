@@ -1,0 +1,8 @@
+# ignore vscode settings
+.vscode/
+
+# ignore generated build directory
+build/
+
+# ignore generated documentation
+docs/html
