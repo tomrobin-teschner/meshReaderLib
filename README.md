@@ -15,15 +15,21 @@ To compile and use the mesh reading library, use CMake with the usual commands, 
 cd /change/to/project/root/dir
 mkdir build/
 cd build
-cmake -DCMAKE_BUILD_TYPE:STRING=Release ..
+cmake -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr/local ..
 cmake --build . --config Release --target all -j 4
+```
+
+To install the library into the path specified by ```-DCMAKE_INSTALL_PREFIX```, use the following command
+
+```bash
+cmake --build . --target install
 ```
 
 You can test that the library is compiled correctly and working by executing the tests
 
 ```bash
-cd /change/to/project/root/dir/build
-./meshReaderTest
+cd /change/to/project/root/dir/build/tests
+ctest
 ```
 
 # Documentation
