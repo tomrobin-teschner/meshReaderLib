@@ -48,7 +48,7 @@ auto StringHandler::strip(std::string &line) -> void {
 auto StringHandler::splitStringIntoEqualParts(std::string &line, const int numParts) -> StringHandler::StringList {
   auto stringIsDivisibleIntoEqualParts = line.size() % numParts == 0;
   if (!stringIsDivisibleIntoEqualParts)
-    throw std::runtime_error("String is not divisible into equal parts");
+    throw std::runtime_error("> String is not divisible into equal parts");
   
   StringHandler::StringList result;
   result.resize(numParts);

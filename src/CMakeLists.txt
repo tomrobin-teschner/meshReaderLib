@@ -4,3 +4,4 @@ add_subdirectory(mesh/meshReader/starCD)
 
 add_subdirectory(utilities/fileReader)
 add_subdirectory(utilities/stringHandler)
+add_subdirectory(utilities/types)
