@@ -1,3 +1,5 @@
+![Generic Badge](https://github.com/tomrobin-teschner/meshReaderLib/actions/workflows/cmake.yml/badge.svg)
+
 # Introduction
 
 This repository showcases how to implement mesh reading for Computational Fluid Dynamics (CFD) applications using C++. It currently supports the following file formats:
