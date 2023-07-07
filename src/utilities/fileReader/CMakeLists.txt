@@ -1,2 +1,1 @@
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE fileReader.cpp PUBLIC fileReader.hpp)
-set_property(TARGET ${CMAKE_PROJECT_NAME} APPEND PROPERTY PUBLIC_HEADER ${CMAKE_CURRENT_SOURCE_DIR}/fileReader.hpp)
