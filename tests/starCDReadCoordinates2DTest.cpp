@@ -11,7 +11,7 @@
 #include "src/mesh/meshReader/starCD/starCD.hpp"
 #include "src/utilities/types/enums.hpp"
 
-bool checkCoordinates2D(cfd::mesh::MeshReaderBase &meshReader) {
+int checkCoordinates2D(cfd::mesh::MeshReaderBase &meshReader) {
   auto coordinates = meshReader.getCoordinates();
 
   assert(coordinates.size() == 5);
@@ -36,7 +36,7 @@ bool checkCoordinates2D(cfd::mesh::MeshReaderBase &meshReader) {
   assert(coordinates[4][Coordinate::Y] == 1.0);
   assert(coordinates[4][Coordinate::Z] == 0.0);
 
-  return true;
+  return 0;
 }
 
 int main() {
@@ -44,5 +44,5 @@ int main() {
   cfd::mesh::StarCD mesh2D(filePath2D);
   mesh2D.readMesh();
 
-  return !checkCoordinates2D(mesh2D);
+  return checkCoordinates2D(mesh2D);
 }

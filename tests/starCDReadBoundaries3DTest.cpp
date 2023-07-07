@@ -11,7 +11,7 @@
 #include "src/mesh/meshReader/starCD/starCD.hpp"
 #include "src/utilities/types/enums.hpp"
 
-bool checkBoundaries3D(cfd::mesh::MeshReaderBase &meshReader) {
+int checkBoundaries3D(cfd::mesh::MeshReaderBase &meshReader) {
   std::cout << "> checking 3D boundary reading" << std::endl;
   auto cells = meshReader.getBoundaryCells();
   auto shapes = meshReader.getBoundaryShapes();
@@ -70,7 +70,7 @@ bool checkBoundaries3D(cfd::mesh::MeshReaderBase &meshReader) {
   assert(bc[4] == BoundaryCondition::Wall);
   assert(bc[5] == BoundaryCondition::Inlet);
 
-  return true;
+  return 0;
 }
 
 int main() {
@@ -78,5 +78,5 @@ int main() {
   cfd::mesh::StarCD mesh3D(filePath3D);
   mesh3D.readMesh();
 
-  return !checkBoundaries3D(mesh3D);
+  return checkBoundaries3D(mesh3D);
 }

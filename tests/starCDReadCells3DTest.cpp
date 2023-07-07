@@ -11,7 +11,7 @@
 #include "src/mesh/meshReader/starCD/starCD.hpp"
 #include "src/utilities/types/enums.hpp"
 
-bool checkCells3D(cfd::mesh::MeshReaderBase &meshReader) {
+int checkCells3D(cfd::mesh::MeshReaderBase &meshReader) {
   std::cout << "> checking 3D cell reading" << std::endl;
   auto cells = meshReader.getInteriorCells();
   auto shapes = meshReader.getInteriorShapes();
@@ -52,7 +52,7 @@ bool checkCells3D(cfd::mesh::MeshReaderBase &meshReader) {
   assert(shapes[2] == Shape::PRISM);
   assert(shapes[3] == Shape::HEXAHEDRON);
 
-  return true;
+  return 0;
 }
 
 int main() {
@@ -60,5 +60,5 @@ int main() {
   cfd::mesh::StarCD mesh3D(filePath3D);
   mesh3D.readMesh();
 
-  return !checkCells3D(mesh3D);
+  return checkCells3D(mesh3D);
 }
