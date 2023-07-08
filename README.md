@@ -1,4 +1,9 @@
 ![Generic Badge](https://github.com/tomrobin-teschner/meshReaderLib/actions/workflows/cmake.yml/badge.svg)
+[![CodeFactor](https://www.codefactor.io/repository/github/tomrobin-teschner/meshreaderlib/badge/main)](https://www.codefactor.io/repository/github/tomrobin-teschner/meshreaderlib/overview/main)
+![Codacy grade](https://img.shields.io/codacy/grade/208e83f4771f4be5bfb13a8da21fa137?logo=codacy)
+![GitHub](https://img.shields.io/github/license/tomrobin-teschner/meshReaderLib)
+
+
 
 # Introduction
 
